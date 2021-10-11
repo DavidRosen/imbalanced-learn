@@ -68,7 +68,11 @@ Summary of important metrics
 The :func:`classification_report_imbalanced` will compute a set of metrics
 per class and summarize it in a table. The parameter `output_dict` allows
 to get a string or a Python dictionary. This dictionary can be reused to create
-a Pandas dataframe for instance.
+a Pandas dataframe for instance.  Its "avg/total" bottom row contains 
+the Weighted Average of each column, except the sup (Support) column for which
+it is has the total.  Also note that the avg value at the bottom of the "rec"
+column is simply the Accuracy because  Weighted Average Recall is just another 
+name for Accuracy.
 
 .. _pairwise_metrics:
 
